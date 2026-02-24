@@ -1,11 +1,10 @@
-<!-- book.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book a Repair | Appliance 911 - Mitchells Plain</title>
-    <meta name="description" content="Book your appliance repair online. Same-day service available in Mitchells Plain, Cape Town. Refrigerators, washing machines, ovens & more.">
+    <title>Book a Repair | Appliance 911 - Cape Town</title>
+    <meta name="description" content="Book your appliance repair online. Same-day service available across Cape Town including Sea Point, Camps Bay, Fish Hoek, Noordhoek, Durbanville & more.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -37,7 +36,6 @@
             overflow-x: hidden;
         }
 
-        /* Header */
         .header {
             position: fixed;
             top: 0;
@@ -91,7 +89,6 @@
             50% { transform: scale(1.05); }
         }
 
-        /* Sidebar */
         .sidebar {
             position: fixed;
             top: 0;
@@ -174,10 +171,8 @@
             font-size: 1.125rem;
         }
 
-        /* Main Content */
         .main-content { margin-top: 70px; }
 
-        /* Page Header */
         .page-header {
             background: linear-gradient(135deg, var(--dark) 0%, #16213e 100%);
             color: var(--white);
@@ -198,7 +193,6 @@
             margin: 0 auto;
         }
 
-        /* Form Section */
         .section { padding: 4rem 1.5rem; }
         
         .form-container {
@@ -447,7 +441,6 @@
             color: var(--primary);
         }
 
-        /* Success Message */
         .success-message {
             display: none;
             background: var(--success);
@@ -468,7 +461,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* WhatsApp Float */
         .whatsapp-float {
             position: fixed;
             bottom: 2rem;
@@ -515,7 +507,6 @@
             right: 75px;
         }
 
-        /* Footer */
         .footer {
             background: var(--dark);
             color: var(--white);
@@ -575,7 +566,6 @@
             opacity: 0.7;
         }
 
-        /* Responsive */
         @media (min-width: 768px) {
             .page-header h1 { font-size: 3rem; }
             .form-grid { grid-template-columns: 1fr 1fr; }
@@ -603,7 +593,6 @@
 </head>
 <body>
 
-    <!-- Header -->
     <header class="header">
         <button class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle menu">
             <i class="fas fa-bars"></i>
@@ -620,14 +609,12 @@
         </div>
     </header>
 
-    <!-- Sidebar Overlay -->
     <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
 
-    <!-- Sidebar Navigation -->
     <nav class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <h3>Appliance 911</h3>
-            <p>Mitchells Plain, Cape Town</p>
+            <p>Cape Town & Surrounds</p>
         </div>
         
         <ul class="nav-menu">
@@ -673,31 +660,25 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main class="main-content">
         
-        <!-- Page Header -->
         <section class="page-header">
             <h1>Book a Repair</h1>
             <p>Fill out the form below and we'll get back to you within 30 minutes during business hours.</p>
         </section>
 
-        <!-- Form Section -->
         <section class="section">
             <div class="form-container">
                 <div class="form-header">
                     <h2>Schedule Your Repair</h2>
-                    <p>Same-day service available for urgent repairs</p>
+                    <p>Same-day service available for urgent repairs across Cape Town</p>
                 </div>
                 
                 <div class="form-body">
-                    <!-- Netlify Form -->
                     <form name="repair-booking" method="POST" data-netlify="true" action="/success.html" enctype="multipart/form-data">
                         
-                        <!-- Hidden field for Netlify form name -->
                         <input type="hidden" name="form-name" value="repair-booking">
                         
-                        <!-- Honeypot field to prevent spam -->
                         <p style="display: none;">
                             <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                         </p>
@@ -760,8 +741,35 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="area">Your Area <span class="required">*</span></label>
+                                <select id="area" name="area" required>
+                                    <option value="">Select your area</option>
+                                    <option value="Sea Point">Sea Point</option>
+                                    <option value="Camps Bay">Camps Bay</option>
+                                    <option value="Green Point">Green Point</option>
+                                    <option value="Clifton">Clifton</option>
+                                    <option value="Bantry Bay">Bantry Bay</option>
+                                    <option value="Fresnaye">Fresnaye</option>
+                                    <option value="Fish Hoek">Fish Hoek</option>
+                                    <option value="Simon's Town">Simon's Town</option>
+                                    <option value="Noordhoek">Noordhoek</option>
+                                    <option value="Kommetjie">Kommetjie</option>
+                                    <option value="Durbanville">Durbanville</option>
+                                    <option value="Bellville">Bellville</option>
+                                    <option value="Table View">Table View</option>
+                                    <option value="Blouberg">Blouberg</option>
+                                    <option value="City Centre">City Centre</option>
+                                    <option value="Gardens">Gardens</option>
+                                    <option value="Claremont">Claremont</option>
+                                    <option value="Rondebosch">Rondebosch</option>
+                                    <option value="Constantia">Constantia</option>
+                                    <option value="Other">Other (specify in address)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group full-width">
                                 <label for="address">Your Address <span class="required">*</span></label>
-                                <input type="text" id="address" name="address" required placeholder="123 Main Street, Mitchells Plain">
+                                <input type="text" id="address" name="address" required placeholder="123 Main Street, Cape Town">
                             </div>
 
                             <div class="form-group full-width">
@@ -784,7 +792,7 @@
 
                         <div class="form-note">
                             <strong><i class="fas fa-info-circle"></i> What happens next?</strong>
-                            After submitting, you'll receive a confirmation SMS/Email within 30 minutes with your appointment details. Our technician will arrive within the selected timeframe.
+                            After submitting, you'll receive a confirmation SMS/Email within 30 minutes with your appointment details. Our technician will arrive within the selected timeframe anywhere in Cape Town.
                         </div>
 
                         <div class="checkbox-group">
@@ -824,7 +832,6 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
@@ -840,7 +847,7 @@
                     <i class="fas fa-envelope"></i> bookings@appliance911.co.za
                 </a>
                 <p style="margin-top: 1rem; opacity: 0.8;">
-                    <i class="fas fa-map-marker-alt"></i> Mitchells Plain, Cape Town
+                    <i class="fas fa-map-marker-alt"></i> Serving Cape Town & Surrounding Areas
                 </p>
             </div>
 
@@ -854,13 +861,12 @@
             <div class="footer-bottom">
                 <p>&copy; 2024 Appliance 911. All rights reserved.</p>
                 <p style="margin-top: 0.5rem; font-size: 0.75rem;">
-                    Professional appliance repair services in Mitchells Plain, Cape Town.
+                    Professional appliance repair services across Cape Town.
                 </p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
     <a href="https://wa.me/27752985714?text=Hi%20Appliance%20911,%20I%20need%20help%20with%20a%20repair" 
        class="whatsapp-float" 
        target="_blank" 
@@ -870,7 +876,6 @@
         <span class="whatsapp-tooltip">Chat with us!</span>
     </a>
 
-    <!-- JavaScript -->
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
@@ -894,7 +899,6 @@
             }
         });
 
-        // Pre-fill service from URL parameter
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param);
@@ -919,7 +923,6 @@
             }
         });
 
-        // File input display
         function updateFileName(input) {
             const label = document.getElementById('fileLabel');
             const span = label.querySelector('span');
@@ -937,17 +940,12 @@
             }
         }
 
-        // Form validation enhancement
         const form = document.querySelector('form');
         const submitBtn = document.getElementById('submitBtn');
 
         form.addEventListener('submit', function(e) {
-            // Disable button to prevent double submission
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            
-            // Let Netlify handle the submission naturally
-            // The form will redirect to success.html
         });
     </script>
 

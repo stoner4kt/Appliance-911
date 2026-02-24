@@ -1,11 +1,10 @@
-<!-- services.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Appliance 911 - Mitchells Plain</title>
-    <meta name="description" content="Professional appliance repair services in Mitchells Plain. Refrigerators, washing machines, dryers, dishwashers, ovens, and microwaves. Same-day service available.">
+    <title>Our Services | Appliance 911 - Cape Town</title>
+    <meta name="description" content="Professional appliance repair services across Cape Town. Sea Point, Camps Bay, Fish Hoek, Noordhoek, Durbanville & all surrounding areas. Same-day service available.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -37,7 +36,6 @@
             overflow-x: hidden;
         }
 
-        /* Header */
         .header {
             position: fixed;
             top: 0;
@@ -91,7 +89,6 @@
             50% { transform: scale(1.05); }
         }
 
-        /* Sidebar */
         .sidebar {
             position: fixed;
             top: 0;
@@ -174,10 +171,8 @@
             font-size: 1.125rem;
         }
 
-        /* Main Content */
         .main-content { margin-top: 70px; }
 
-        /* Page Header */
         .page-header {
             background: linear-gradient(135deg, var(--dark) 0%, #16213e 100%);
             color: var(--white);
@@ -199,7 +194,6 @@
             margin: 0 auto;
         }
 
-        /* Services Detail Section */
         .section { padding: 4rem 1.5rem; }
         
         .section-header {
@@ -363,7 +357,6 @@
             color: var(--white);
         }
 
-        /* Process Section */
         .process-section {
             background: var(--white);
             padding: 4rem 1.5rem;
@@ -421,7 +414,6 @@
             font-size: 0.95rem;
         }
 
-        /* Brands Section */
         .brands-section {
             padding: 4rem 1.5rem;
             text-align: center;
@@ -451,7 +443,50 @@
             transform: translateY(-3px);
         }
 
-        /* WhatsApp Float */
+        .coverage-section {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .coverage-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .coverage-section > p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .coverage-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .coverage-item {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .coverage-item strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .coverage-item span {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
         .whatsapp-float {
             position: fixed;
             bottom: 2rem;
@@ -498,7 +533,6 @@
             right: 75px;
         }
 
-        /* Footer */
         .footer {
             background: var(--dark);
             color: var(--white);
@@ -558,7 +592,6 @@
             opacity: 0.7;
         }
 
-        /* Responsive */
         @media (min-width: 768px) {
             .page-header h1 { font-size: 3rem; }
             .service-grid { grid-template-columns: 1fr 1fr; }
@@ -574,6 +607,7 @@
             }
             .brands-grid { grid-template-columns: repeat(4, 1fr); }
             .emergency-badge { display: inline-flex; }
+            .coverage-grid { grid-template-columns: repeat(3, 1fr); }
         }
 
         @media (min-width: 1024px) {
@@ -599,7 +633,6 @@
 </head>
 <body>
 
-    <!-- Header -->
     <header class="header">
         <button class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle menu">
             <i class="fas fa-bars"></i>
@@ -616,14 +649,12 @@
         </div>
     </header>
 
-    <!-- Sidebar Overlay -->
     <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
 
-    <!-- Sidebar Navigation -->
     <nav class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <h3>Appliance 911</h3>
-            <p>Mitchells Plain, Cape Town</p>
+            <p>Cape Town & Surrounds</p>
         </div>
         
         <ul class="nav-menu">
@@ -669,16 +700,13 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main class="main-content">
         
-        <!-- Page Header -->
         <section class="page-header">
             <h1>Our Repair Services</h1>
-            <p>Professional appliance repair for all major brands. Fast, reliable service with a 90-day warranty on all repairs.</p>
+            <p>Professional appliance repair for all major brands. Fast, reliable service with a 90-day warranty on all repairs across Cape Town.</p>
         </section>
 
-        <!-- Refrigerator Service -->
         <section class="section">
             <div class="service-detail" id="refrigerator">
                 <div class="service-detail-header">
@@ -725,7 +753,6 @@
                 </div>
             </div>
 
-            <!-- Washing Machine Service -->
             <div class="service-detail" id="washing-machine">
                 <div class="service-detail-header">
                     <div class="service-detail-icon">
@@ -771,7 +798,6 @@
                 </div>
             </div>
 
-            <!-- Dryer Service -->
             <div class="service-detail" id="dryer">
                 <div class="service-detail-header">
                     <div class="service-detail-icon">
@@ -817,7 +843,6 @@
                 </div>
             </div>
 
-            <!-- Dishwasher Service -->
             <div class="service-detail" id="dishwasher">
                 <div class="service-detail-header">
                     <div class="service-detail-icon">
@@ -863,7 +888,6 @@
                 </div>
             </div>
 
-            <!-- Oven/Stove Service -->
             <div class="service-detail" id="oven">
                 <div class="service-detail-header">
                     <div class="service-detail-icon">
@@ -909,7 +933,6 @@
                 </div>
             </div>
 
-            <!-- Microwave Service -->
             <div class="service-detail" id="microwave">
                 <div class="service-detail-header">
                     <div class="service-detail-icon">
@@ -956,7 +979,6 @@
             </div>
         </section>
 
-        <!-- Process Section -->
         <section class="process-section">
             <div class="section-header">
                 <span class="section-tag">How It Works</span>
@@ -990,7 +1012,6 @@
             </div>
         </section>
 
-        <!-- Brands Section -->
         <section class="brands-section">
             <div class="section-header">
                 <span class="section-tag">Trusted Service</span>
@@ -1010,10 +1031,41 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
+        <section class="coverage-section">
+            <h2>Areas We Cover</h2>
+            <p>From the Atlantic Seaboard to the Southern Peninsula and Northern Suburbs</p>
+            
+            <div class="coverage-grid">
+                <div class="coverage-item">
+                    <strong>Atlantic Seaboard</strong>
+                    <span>Sea Point, Camps Bay, Clifton, Bantry Bay, Fresnaye, Green Point</span>
+                </div>
+                <div class="coverage-item">
+                    <strong>Southern Peninsula</strong>
+                    <span>Fish Hoek, Simon's Town, Noordhoek, Kommetjie, Scarborough</span>
+                </div>
+                <div class="coverage-item">
+                    <strong>Northern Suburbs</strong>
+                    <span>Durbanville, Bellville, Table View, Blouberg, Milnerton</span>
+                </div>
+                <div class="coverage-item">
+                    <strong>City Bowl</strong>
+                    <span>City Centre, Gardens, Tamboerskloof, Oranjezicht</span>
+                </div>
+                <div class="coverage-item">
+                    <strong>Southern Suburbs</strong>
+                    <span>Claremont, Rondebosch, Newlands, Wynberg, Constantia</span>
+                </div>
+                <div class="coverage-item">
+                    <strong>And More</strong>
+                    <span>Contact us if your area isn't listed - we probably cover it!</span>
+                </div>
+            </div>
+        </section>
+
         <section class="section" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: var(--white); text-align: center;">
             <h2 style="font-size: 2rem; margin-bottom: 1rem;">Ready to Get Your Appliance Fixed?</h2>
-            <p style="margin-bottom: 2rem; opacity: 0.9;">Book now for same-day service in Mitchells Plain</p>
+            <p style="margin-bottom: 2rem; opacity: 0.9;">Book now for same-day service anywhere in Cape Town</p>
             <a href="book.html" class="btn" style="background: var(--white); color: var(--primary);">
                 <i class="fas fa-calendar-check"></i>
                 Schedule Repair Now
@@ -1022,7 +1074,6 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
@@ -1038,7 +1089,7 @@
                     <i class="fas fa-envelope"></i> bookings@appliance911.co.za
                 </a>
                 <p style="margin-top: 1rem; opacity: 0.8;">
-                    <i class="fas fa-map-marker-alt"></i> Mitchells Plain, Cape Town
+                    <i class="fas fa-map-marker-alt"></i> Serving Cape Town & Surrounding Areas
                 </p>
             </div>
 
@@ -1052,13 +1103,12 @@
             <div class="footer-bottom">
                 <p>&copy; 2024 Appliance 911. All rights reserved.</p>
                 <p style="margin-top: 0.5rem; font-size: 0.75rem;">
-                    Professional appliance repair services in Mitchells Plain, Cape Town.
+                    Professional appliance repair services across Cape Town.
                 </p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
     <a href="https://wa.me/27752985714?text=Hi%20Appliance%20911,%20I%20need%20help%20with%20a%20repair" 
        class="whatsapp-float" 
        target="_blank" 
@@ -1068,7 +1118,6 @@
         <span class="whatsapp-tooltip">Chat with us!</span>
     </a>
 
-    <!-- JavaScript -->
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
@@ -1092,7 +1141,6 @@
             }
         });
 
-        // Animate on scroll
         const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
